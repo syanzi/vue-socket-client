@@ -1,0 +1,5 @@
+build/*.js
+config/*.js
+src/assets
+src/ppSwallow/utils/md5.js
+/src/views/login/WeixiLogin.vue

@@ -1,0 +1,168 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+html {
+  height: 100%;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eeeeee;
+  overflow-x: auto;
+  overflow-y: auto;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  font-weight:400;
+  font-family: PingFangSC-Regular, Microsoft YaHei, Arial, sans-serif;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a, button, input { /*去除点击高亮*/
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+img, input, textarea {
+  vertical-align: middle;
+}
+
+input, textarea {
+  outline: none;
+}
+
+input.focus, textarea.focus, button:focus {
+  outline: none;
+}
+
+input.active, textarea.active, button:active, button:visited {
+  outline: none;
+}
+
+input {
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  border: none;
+  -webkit-appearance: none;
+}
+
+img{
+  border-width:0;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  zoom: 1;
+  overflow: hidden;
+}
+
+a:focus, a:active {
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+}
+
+/*微软浏览器密码输入框内置眼睛图片*/
+::-ms-clear, ::-ms-reveal {
+  display: none;
+}
+
+*, ::before, ::after {
+  /*选择所有标签*/
+  margin: 0;
+  padding: 0;
+
+  /*设置所有的元素都是以边框开始计算宽度的 百分比*/
+  box-sizing: border-box;
+}
+
+/* ******************************************/
+
+.el-message-box {
+  width: auto;
+  min-width: 40%;
+}
+
+.query-form {
+  margin-top: 20px;
+}
+
+.table-expand {
+  .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 49%;
+    label {
+      width: 90px;
+      color: #99a9bf;
+    }
+  }
+}
+
+.pagination-container {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    html{
+      height: 100%;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-size:13.33333333vw;
+      -webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  .query-form-item.el-form-item {
+    display: block !important;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .query-form-item .el-form-item__content {
+    width: 100%;
+    .el-select {
+      width: 100%;
+    }
+  }
+  .el-dialog {
+    width: 80%;
+  }
+
+  .el-message {
+    min-width: 70% !important;
+  }
+  .el-message__icon el-icon-error{
+     display: none !important;
+  }
+  .el-icon-error:before {
+    display: none;
+  }
+}
